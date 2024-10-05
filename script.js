@@ -42,7 +42,18 @@ submitBtn.addEventListener('click', () => {
   }
   
 })
-
+/*
 container.addEventListener('mouseover', (event) => {
   event.target.classList.add('square-activated');
+}); */
+function color(event) {
+  event.target.classList.add('square-activated');
+}
+
+container.addEventListener('mousedown', () => {
+  container.addEventListener('mouseover', color)
 });
+
+container.addEventListener('mouseup', () => {
+  container.removeEventListener('mouseover', color)
+})
