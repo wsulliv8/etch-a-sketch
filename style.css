@@ -1,0 +1,42 @@
+.main {
+  display: flex;
+  width: 100vw;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+}
+
+.submit {
+  border-radius: 6px;
+}
+
+#numbSquares {
+  border-radius: 6px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 960px;
+  height: 960px;
+}
+
+.square {
+  flex: none;
+  background-color: rgb(146, 146, 146);
+}
+
+.square.square-activated {
+  background-color: rgb(115, 78, 150);
+}
