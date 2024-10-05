@@ -22,22 +22,26 @@ submitBtn.addEventListener('click', () => {
 */
 submitBtn.addEventListener('click', () => {
   numSquares = prompt('Enter # of squares', 16);
-  (numSquares > 100) ? numSquares = 100 : null;
+  (numSquares > 400) ? numSquares = 400 : null;
+
+  let child = container.lastElementChild;
+  while (child) {
+    container.removeChild(child);
+    child = container.lastElementChild;
+  }
+
+  for (let i=0; i<numSquares; i++){
+    let square = document.createElement('div');
+    square.setAttribute('class', 'square');
+    let canvasArea = container.offsetWidth ** 2;
+    let x = Math.sqrt(canvasArea/numSquares);
+    let y = x;
+    square.style.width = `${x}px`;
+    square.style.height = `${y}px`;
+    container.appendChild(square);
+  }
+  
 })
-
-let numSquares = prompt('Enter # of squares', 16);
-(numSquares > 100) ? numSquares = 100 : null;
-
-for (let i=0; i<numSquares; i++){
-  let square = document.createElement('div');
-  square.setAttribute('class', 'square');
-  let canvasArea = container.offsetWidth ** 2;
-  let x = Math.sqrt(canvasArea/numSquares);
-  let y = x;
-  square.style.width = `${x}px`;
-  square.style.height = `${y}px`;
-  container.appendChild(square);
-}
 
 container.addEventListener('mouseover', (event) => {
   event.target.classList.add('square-activated');

@@ -7,20 +7,16 @@
   margin: 0;
 }
 
-form {
+.submit-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  margin: 20px;
+  margin: 10px;
 }
 
 .submit {
   border-radius: 6px;
-}
-
-#numbSquares {
-  border-radius: 6px;
+  font-size: 20px;
 }
 
 .container {
